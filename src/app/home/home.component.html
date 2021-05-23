@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!--Product object using values of Interpolation-->
+<h2>Product</h2>
+<p>Title: {{product.title}}</p>
+<p>Price: {{product.price}}</p>
+<br/>
+<br/>
+<h1>Property binding in html</h1>
+<img [src] ="imgURL" alt="" width="450" height="300"><br/><br/>
+<h2 [style.color]="myColor">This is a Blue Heading</h2> <br/><br/>
+<button (click)="myFunc()">Show Alert</button> <br/><br/>
+
+<input type="text" [disabled]="disabledBox" [value]="name"/>  <!--Property binding-->
+<br/> <br/>
+<input type="text" [disabled]="disabledBox" value={{name}} />  <!--Interpolation-->
+<br/><br/>
+<button class="btn btn-success" (click)="enableMe()">Click Me</button>
+<br/><br/>
+<h2>Event binding in html</h2>
+<hr>
+<button (click)="incrementCount()">Plus Button</button><br/>
+<p>New Value after Clicked: {{value}}</p>
+<hr>
+<br/><!--Two Way data Binding NgModel-->
+<input type="text" [(ngModel)]= "username">
+<h2>{{username}}</h2> 
+
+<br/> 
+<!-- https://medium.com/@nalinathukorala93/angular-6-data-binding-in-brief-1756d1684f07 -->
+</body>
